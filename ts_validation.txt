@@ -1,0 +1,43 @@
+*** Settings ***
+Resource	resource.txt
+Library		Selenium2Library
+Suite Setup	Open Browser To Test Page
+Suite Teardown	Close All Browsers
+
+*** Test Cases ***
+Verify Name field is displayed
+	Verify Text Display	Name
+	Verify Name Input Field Display
+
+Verify Age field is displayed
+	Verify Text Display	Age
+	Verify Age Input Field Display
+
+Verify Gender field is displayed
+	Verify Text Display	Gender
+	Verify Text Display	Male
+	Verify Text Display	Female
+	Verify Gender Radio Buttons Display
+
+Verify Sports(Women) field is displayed
+	Enter Name	Christina
+	Enter Age	35
+	Select Gender	Female
+	Continue to Next Page
+	Verify Text Display	Sports (Women)
+	Verify Sport Checkbox Display	Volleyball
+	Verify Sport Checkbox Display	Swimming
+	Verify Sport Checkbox Display	Running
+	Verify Sport Checkbox Display	Gymnastics
+	Back to First Page
+
+Verify Sports(Men) field is displayed
+	Enter Name	Alejandro
+	Enter Age	25
+	Select Gender	Male
+	Continue to Next Page
+	Verify Text Display	Sports (Men)
+	Verify Sport Checkbox Display	Basketball
+	Verify Sport Checkbox Display	Wrestling
+	Verify Sport Checkbox Display	Running
+	Verify Sport Checkbox Display	MMA

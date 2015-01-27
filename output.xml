@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150127 23:55:46.630" generator="Robot 2.8.7 (Python 2.7.9 on darwin)">
+<suite source="/Users/globalvillageconsultingasiapacific/Documents/PROJECTS/Robot/ts_validation.txt" id="s1" name="Ts Validation">
+<kw type="setup" name="resource.Open Browser To Test Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${FORM URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:46.749" level="INFO">Opening browser 'Firefox' to base url 'https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140'</msg>
+<status status="PASS" endtime="20150127 23:55:52.353" starttime="20150127 23:55:46.748"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20150127 23:55:52.354" starttime="20150127 23:55:52.354"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150127 23:55:52.946" starttime="20150127 23:55:52.354"></status>
+</kw>
+<kw type="kw" name="resource.Test Form Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<status status="PASS" endtime="20150127 23:55:53.236" starttime="20150127 23:55:52.947"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150127 23:55:53.524" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150127 23:55:53.524" starttime="20150127 23:55:53.236"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:53.524" starttime="20150127 23:55:52.946"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:53.525" starttime="20150127 23:55:46.748"></status>
+</kw>
+<test id="s1-t1" name="Verify Name field is displayed">
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Name</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:53.956" level="INFO">Current page contains text 'Name'.</msg>
+<status status="PASS" endtime="20150127 23:55:53.956" starttime="20150127 23:55:53.527"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:53.957" starttime="20150127 23:55:53.526"></status>
+</kw>
+<kw type="kw" name="resource.Verify Name Input Field Display">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Textfield">
+<doc>Verifies text field identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<msg timestamp="20150127 23:55:54.382" level="INFO">Current page contains text field 'entry.1563791636'.</msg>
+<status status="PASS" endtime="20150127 23:55:54.382" starttime="20150127 23:55:53.958"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:54.383" starttime="20150127 23:55:53.957"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150127 23:55:54.383" critical="yes" starttime="20150127 23:55:53.525"></status>
+</test>
+<test id="s1-t2" name="Verify Age field is displayed">
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Age</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:54.808" level="INFO">Current page contains text 'Age'.</msg>
+<status status="PASS" endtime="20150127 23:55:54.808" starttime="20150127 23:55:54.385"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:54.809" starttime="20150127 23:55:54.385"></status>
+</kw>
+<kw type="kw" name="resource.Verify Age Input Field Display">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Element">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<msg timestamp="20150127 23:55:55.023" level="INFO">Current page contains element 'entry.930637752'.</msg>
+<status status="PASS" endtime="20150127 23:55:55.023" starttime="20150127 23:55:54.810"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:55.024" starttime="20150127 23:55:54.809"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150127 23:55:55.024" critical="yes" starttime="20150127 23:55:54.384"></status>
+</test>
+<test id="s1-t3" name="Verify Gender field is displayed">
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Gender</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:55.452" level="INFO">Current page contains text 'Gender'.</msg>
+<status status="PASS" endtime="20150127 23:55:55.453" starttime="20150127 23:55:55.026"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:55.453" starttime="20150127 23:55:55.026"></status>
+</kw>
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Male</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:55.878" level="INFO">Current page contains text 'Male'.</msg>
+<status status="PASS" endtime="20150127 23:55:55.878" starttime="20150127 23:55:55.454"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:55.878" starttime="20150127 23:55:55.453"></status>
+</kw>
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Female</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:56.304" level="INFO">Current page contains text 'Female'.</msg>
+<status status="PASS" endtime="20150127 23:55:56.305" starttime="20150127 23:55:55.880"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:56.305" starttime="20150127 23:55:55.879"></status>
+</kw>
+<kw type="kw" name="resource.Verify Gender Radio Buttons Display">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Radio Button">
+<doc>Verifies radio button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Male</arg>
+</arguments>
+<msg timestamp="20150127 23:55:56.728" level="INFO">Current page contains radio button 'Male'.</msg>
+<status status="PASS" endtime="20150127 23:55:56.728" starttime="20150127 23:55:56.306"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Page Should Contain Radio Button">
+<doc>Verifies radio button identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>Female</arg>
+</arguments>
+<msg timestamp="20150127 23:55:57.144" level="INFO">Current page contains radio button 'Female'.</msg>
+<status status="PASS" endtime="20150127 23:55:57.145" starttime="20150127 23:55:56.728"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:57.145" starttime="20150127 23:55:56.305"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150127 23:55:57.145" critical="yes" starttime="20150127 23:55:55.025"></status>
+</test>
+<test id="s1-t4" name="Verify Sports(Women) field is displayed">
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>Christina</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:57.148" level="INFO">Typing text 'Christina' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150127 23:55:57.833" starttime="20150127 23:55:57.148"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:57.833" starttime="20150127 23:55:57.147"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>35</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:57.835" level="INFO">Typing text '35' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150127 23:55:58.524" starttime="20150127 23:55:57.834"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:58.524" starttime="20150127 23:55:57.834"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>Female</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150127 23:55:58.526" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150127 23:55:59.221" starttime="20150127 23:55:58.525"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:55:59.222" starttime="20150127 23:55:58.525"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150127 23:55:59.223" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150127 23:56:00.392" starttime="20150127 23:55:59.223"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150127 23:56:00.678" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150127 23:56:00.679" starttime="20150127 23:56:00.392"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:00.679" starttime="20150127 23:55:59.222"></status>
+</kw>
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Sports (Women)</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:01.109" level="INFO">Current page contains text 'Sports (Women)'.</msg>
+<status status="PASS" endtime="20150127 23:56:01.109" starttime="20150127 23:56:00.680"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:01.110" starttime="20150127 23:56:00.679"></status>
+</kw>
+<kw type="kw" name="resource.Verify Sport Checkbox Display">
+<doc></doc>
+<arguments>
+<arg>Volleyball</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Checkbox">
+<doc>Verifies checkbox identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${sport name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:01.534" level="INFO">Current page contains checkbox 'Volleyball'.</msg>
+<status status="PASS" endtime="20150127 23:56:01.534" starttime="20150127 23:56:01.111"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:01.534" starttime="20150127 23:56:01.110"></status>
+</kw>
+<kw type="kw" name="resource.Verify Sport Checkbox Display">
+<doc></doc>
+<arguments>
+<arg>Swimming</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Checkbox">
+<doc>Verifies checkbox identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${sport name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:01.952" level="INFO">Current page contains checkbox 'Swimming'.</msg>
+<status status="PASS" endtime="20150127 23:56:01.953" starttime="20150127 23:56:01.536"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:01.953" starttime="20150127 23:56:01.535"></status>
+</kw>
+<kw type="kw" name="resource.Verify Sport Checkbox Display">
+<doc></doc>
+<arguments>
+<arg>Running</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Checkbox">
+<doc>Verifies checkbox identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${sport name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:02.377" level="INFO">Current page contains checkbox 'Running'.</msg>
+<status status="PASS" endtime="20150127 23:56:02.377" starttime="20150127 23:56:01.954"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:02.378" starttime="20150127 23:56:01.953"></status>
+</kw>
+<kw type="kw" name="resource.Verify Sport Checkbox Display">
+<doc></doc>
+<arguments>
+<arg>Gymnastics</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Checkbox">
+<doc>Verifies checkbox identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${sport name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:02.798" level="INFO">Current page contains checkbox 'Gymnastics'.</msg>
+<status status="PASS" endtime="20150127 23:56:02.798" starttime="20150127 23:56:02.379"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:02.798" starttime="20150127 23:56:02.378"></status>
+</kw>
+<kw type="kw" name="resource.Back to First Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>back</arg>
+</arguments>
+<msg timestamp="20150127 23:56:02.800" level="INFO">Clicking button 'back'.</msg>
+<status status="PASS" endtime="20150127 23:56:04.164" starttime="20150127 23:56:02.800"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Gender</arg>
+</arguments>
+<status status="PASS" endtime="20150127 23:56:04.376" starttime="20150127 23:56:04.164"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150127 23:56:04.667" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150127 23:56:04.667" starttime="20150127 23:56:04.376"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:04.667" starttime="20150127 23:56:02.799"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150127 23:56:04.668" critical="yes" starttime="20150127 23:55:57.146"></status>
+</test>
+<test id="s1-t5" name="Verify Sports(Men) field is displayed">
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>Alejandro</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:04.671" level="INFO">Typing text 'Alejandro' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150127 23:56:05.349" starttime="20150127 23:56:04.670"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:05.350" starttime="20150127 23:56:04.669"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>25</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:05.352" level="INFO">Typing text '25' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150127 23:56:06.014" starttime="20150127 23:56:05.351"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:06.015" starttime="20150127 23:56:05.350"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>Male</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:06.016" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150127 23:56:06.708" starttime="20150127 23:56:06.016"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:06.708" starttime="20150127 23:56:06.015"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150127 23:56:06.710" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150127 23:56:07.951" starttime="20150127 23:56:06.710"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150127 23:56:08.243" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150127 23:56:08.243" starttime="20150127 23:56:07.952"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:08.243" starttime="20150127 23:56:06.709"></status>
+</kw>
+<kw type="kw" name="resource.Verify Text Display">
+<doc></doc>
+<arguments>
+<arg>Sports (Men)</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:08.669" level="INFO">Current page contains text 'Sports (Men)'.</msg>
+<status status="PASS" endtime="20150127 23:56:08.670" starttime="20150127 23:56:08.245"></status>
+</kw>
+<status status="PASS" endtime="20150127 23:56:08.670" starttime="20150127 23:56:08.244"></status>
+</kw>
+<kw type="kw" name="resource.Verify Sport Checkbox Display">
+<doc></doc>
+<arguments>
+<arg>Basketball</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Checkbox">
+<doc>Verifies checkbox identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>${sport name}</arg>
+</arguments>
+<msg timestamp="20150127 23:56:09.317" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+&lt;link type="image/x-icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png" rel="shortcut icon" /&gt;
+&lt;meta content="text/html; charset=utf-8" http-equiv="Content-type" /&gt;
+&lt;meta content="IE=10; chrome=1;" http-equiv="X-UA-Compatible" /&gt;
+&lt;meta content="!" name="fragment" /&gt;
+&lt;meta content="width=device-width" name="viewport" /&gt;
+&lt;base target="_blank" /&gt;
+&lt;title&gt;Test Form&lt;/title&gt;
+&lt;link href="//fonts.googleapis.com/css?family=Roboto:400,700" type="text/css" rel="stylesheet" /&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="/static/forms/client/css/1404371006-formview_st_ltr.css" /&gt;
+&lt;style type="text/css"&gt;
+body {
+  background-color: rgb(231,238,247);
+  background-image: url('//ssl.gstatic.com/docs/forms/themes/images/v1/0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ/blue-stripe-bg.png');
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.ss-form-container, .ss-resp-card {
+  background-color: rgb(255,255,255);
+}
+
+.ss-footer, .ss-response-footer {
+  background-color: rgb(255,255,255);
+}
+
+.ss-grid-row-odd {
+  background-color: rgb(242,242,242);
+}
+
+.ss-form-container, .ss-resp-card {
+  border-color: rgb(212,212,212);
+}
+
+.ss-form-title {
+  text-align: left;
+}
+
+.ss-form-title[dir="rtl"] {
+  text-align: right;
+}
+
+.ss-form-desc {
+  text-align: left;
+}
+
+.ss-form-desc[dir="rtl"] {
+  text-align: right;
+}
+
+.ss-header-image-container {
+  height: 0;
+}
+
+.ss-item {
+  font-size: 1.080rem;
+}
+
+.ss-choices {
+  font-size: 1.000rem;
+}
+
+body {
+  font-family: "Roboto";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.ss-record-username-message {
+  font-family: "Roboto";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.ss-form-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 2.460rem;
+  font-style: normal;
+}
+
+.ss-confirmation {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 2.460rem;
+  font-style: normal;
+}
+
+.ss-page-title, .ss-section-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 1.845rem;
+  font-style: normal;
+}
+
+.ss-form-desc, .ss-page-description, .ss-section-description {
+  font-family: "Roboto";
+  color: rgb(140,140,140);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.ss-resp-content {
+  font-family: "Roboto";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.ss-q-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 700;
+  font-size: 1.080rem;
+  font-style: normal;
+}
+
+.ss-embeddable-object-container .ss-q-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 700;
+  font-size: 1.845rem;
+  font-style: normal;
+}
+
+.ss-q-help, .ss-q-time-hint {
+  font-family: "Roboto";
+  color: rgb(140,140,140);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.ss-choice-label, .video-secondary-text, .ss-gridrow-leftlabel, .ss-gridnumber, .ss-scalenumber, .ss-leftlabel, .ss-rightlabel {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.error-message, .required-message, .ss-required-asterisk {
+  font-family: "Roboto";
+  color: rgb(196,59,29);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.ss-send-email-receipt {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.ss-password-warning {
+  font-family: "Arial";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: italic;
+}
+
+.disclaimer {
+  font-family: "Arial";
+  color: rgb(119,119,119);
+  font-weight: 400;
+  font-size: 0.850rem;
+  font-style: normal;
+}
+
+.ss-footer-content {
+  font-family: "Arial";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+.progress-label {
+  font-family: "Roboto";
+  color: rgb(140,140,140);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+a:link {
+  color: rgb(0,0,238);
+}
+
+a:visited {
+  color: rgb(85,26,139);
+}
+
+a:active {
+  color: rgb(252,0,0);
+}
+
+input[type='text'], input:not([type]), textarea {
+  font-size: 1.000rem;
+}
+
+.error, .required, .errorbox-bad {
+  border-color: rgb(196,59,29);
+}
+
+.jfk-progressBar-nonBlocking .progress-bar-thumb {
+  background-color: rgb(140,140,140);
+}
+
+.ss-logo-image {
+  background-image: url('//ssl.gstatic.com/docs/forms/forms_logo_small_dark.png');
+  background-size: 108px 21px;
+  width: 108px;
+  height: 21px;
+}
+
+@media screen and (-webkit-device-pixel-ratio: 2) {
+.ss-logo-image {
+  background-image: url('//ssl.gstatic.com/docs/forms/forms_logo_small_dark_2x.png');
+}
+}
+
+&lt;/style&gt;
+
+
+&lt;link media="screen and (max-device-width: 721px)" rel="stylesheet" type="text/css" href="/static/forms/client/css/2588955203-mobile_formview_st_ltr.css" /&gt;
+
+&lt;script type="text/javascript"&gt;
+          /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&amp;amp;&amp;amp;define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&amp;amp;'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&amp;amp;&amp;amp;(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u&amp;gt;l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&amp;amp;&amp;amp;l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&amp;amp;&amp;amp;!s.test(i)&amp;amp;&amp;amp;p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&amp;amp;&amp;amp;(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&amp;amp;&amp;amp;t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&amp;amp;&amp;amp;A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&amp;amp;&amp;amp;o&amp;amp;&amp;amp;(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o&amp;gt;l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&amp;amp;&amp;amp;(n||r&amp;amp;&amp;amp;n)&amp;amp;&amp;amp;(u(i),i.validity.valid||s||(e&amp;amp;&amp;amp;i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&amp;amp;&amp;amp;"submit"===a.type&amp;amp;&amp;amp;(t=!0)},v=function(){return E(x,"validity")&amp;amp;&amp;amp;E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&amp;amp;&amp;amp;a.test(i)&amp;amp;&amp;amp;(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a&amp;gt;r:!1:"max"===t?e.getAttribute("max")?r&amp;gt;i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&amp;amp;&amp;amp;e.value!==t&amp;amp;&amp;amp;(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&amp;amp;&amp;amp;window.event!==void 0&amp;amp;&amp;amp;("blur"===t?t="focusout":"focus"===t&amp;amp;&amp;amp;(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&amp;amp;&amp;amp;window.event!==void 0&amp;amp;&amp;amp;e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&amp;amp;&amp;amp;e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r&amp;gt;1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&amp;amp;&amp;amp;3===i.length&amp;amp;&amp;amp;(e.className=e.className.replace(a,i[1]&amp;amp;&amp;amp;i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&amp;amp;&amp;amp;e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length&amp;gt;a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+        &lt;/script&gt;
+&lt;link href="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/oembed?url=https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform&amp;amp;format=xml" type="text/xml+oembed" rel="alternate" /&gt;
+&lt;meta content="Test Form" property="og:title" /&gt;&lt;meta content="article" property="og:type" /&gt;&lt;meta content="Google Docs" property="og:site_name" /&gt;&lt;meta content="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform" property="og:url" /&gt;&lt;meta content="https://lh6.googleusercontent.com/99TCyMaWPMns-OgIf_DlAUvgdwKfI7reNTIXshMX78tdt7rARTH-CDiNNySXD1QRfLI=w1200-h630-p" property="og:image" /&gt;&lt;meta content="1200" property="og:image:width" /&gt;&lt;meta content="630" property="og:image:height" /&gt;&lt;meta content="player" name="twitter:card" /&gt;&lt;meta content="Test Form" name="twitter:title" /&gt;&lt;meta content="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform" name="twitter:url" /&gt;&lt;meta content="https://lh6.googleusercontent.com/99TCyMaWPMns-OgIf_DlAUvgdwKfI7reNTIXshMX78tdt7rARTH-CDiNNySXD1QRfLI=w435-h251-p-b1-c0x00999999" name="twitter:image" /&gt;&lt;meta content="435" name="twitter:player:width" /&gt;&lt;meta content="251" name="twitter:player:height" /&gt;&lt;meta content="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?embedded=true" name="twitter:player" /&gt;&lt;meta content="Google Drive" name="twitter:description" /&gt;&lt;meta content="@googledrive" name="twitter:site" /&gt;
+&lt;/head&gt;
+&lt;body class="ss-base-body" dir="ltr"&gt;&lt;div itemtype="http://schema.org/CreativeWork/FormObject" itemscope=""&gt;&lt;meta content="Test Form" itemprop="name" /&gt;
+
+
+&lt;meta content="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform" itemprop="url" /&gt;
+&lt;meta content="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?embedded=true" itemprop="embedUrl" /&gt;
+&lt;meta content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png" itemprop="faviconUrl" /&gt;
+
+
+
+
+
+&lt;div class="ss-form-container"&gt;&lt;div class="ss-header-image-container"&gt;&lt;div class="ss-header-image-image"&gt;&lt;div class="ss-header-image-sizer"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="ss-top-of-page"&gt;&lt;div class="ss-form-heading"&gt;&lt;h1 dir="ltr" class="ss-form-title"&gt;Test Form&lt;/h1&gt;
+
+
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class="ss-form"&gt;&lt;form onsubmit="" target="_self" id="ss-form" method="POST" action="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/formResponse"&gt;&lt;ol style="padding-left: 0" class="ss-question-list" role="list"&gt;
+&lt;div role="listitem" class="errorbox-good"&gt;
+&lt;div class="ss-item  ss-page-break" dir="ltr"&gt;&lt;div class="ss-form-entry"&gt;
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div role="listitem" class="ss-form-question errorbox-good"&gt;
+&lt;div class="ss-item  ss-checkbox" dir="ltr"&gt;&lt;div class="ss-form-entry"&gt;
+&lt;label for="entry_1027532989" class="ss-q-item-label"&gt;&lt;div class="ss-q-title"&gt;Sports (Men)
+&lt;/div&gt;
+&lt;div dir="ltr" class="ss-q-help ss-secondary-text"&gt;&lt;/div&gt;&lt;/label&gt;
+
+&lt;ul aria-label="Sports (Men)  " role="group" class="ss-choices"&gt;&lt;li class="ss-choice-item"&gt;&lt;label&gt;&lt;span class="ss-choice-item-control goog-inline-block"&gt;&lt;input type="checkbox" class="ss-q-checkbox" role="checkbox" id="group_1887354367_1" value="BasketballX" name="entry.1887354367" /&gt;&lt;/span&gt;
+&lt;span class="ss-choice-label"&gt;BasketballX&lt;/span&gt;
+&lt;/label&gt;&lt;/li&gt; &lt;li class="ss-choice-item"&gt;&lt;label&gt;&lt;span class="ss-choice-item-control goog-inline-block"&gt;&lt;input type="checkbox" class="ss-q-checkbox" role="checkbox" id="group_1887354367_2" value="Wrestling" name="entry.1887354367" /&gt;&lt;/span&gt;
+&lt;span class="ss-choice-label"&gt;Wrestling&lt;/span&gt;
+&lt;/label&gt;&lt;/li&gt; &lt;li class="ss-choice-item"&gt;&lt;label&gt;&lt;span class="ss-choice-item-control goog-inline-block"&gt;&lt;input type="checkbox" class="ss-q-checkbox" role="checkbox" id="group_1887354367_3" value="RunningX" name="entry.1887354367" /&gt;&lt;/span&gt;
+&lt;span class="ss-choice-label"&gt;RunningX&lt;/span&gt;
+&lt;/label&gt;&lt;/li&gt; &lt;li class="ss-choice-item"&gt;&lt;label&gt;&lt;span class="ss-choice-item-control goog-inline-block"&gt;&lt;input type="checkbox" class="ss-q-checkbox" role="checkbox" id="group_1887354367_4" value="MMA" name="entry.1887354367" /&gt;&lt;/span&gt;
+&lt;span class="ss-choice-label"&gt;MMA&lt;/span&gt;
+&lt;/label&gt;&lt;/li&gt; &lt;li class="ss-choice-item"&gt;&lt;label&gt;&lt;span class="ss-choice-item-control goog-inline-block"&gt;&lt;input type="checkbox" class="ss-q-checkbox" role="checkbox" id="group_1887354367_5" value="Boxing" name="entry.1887354367" /&gt;&lt;/span&gt;
+&lt;span class="ss-choice-label"&gt;Boxing&lt;/span&gt;
+&lt;/label&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;div id="1027532989_errorMessage" class="error-message"&gt;&lt;/div&gt;
+&lt;div class="required-message"&gt;Kailangang sagutin ang tanong na ito&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;input type="hidden" value="[[[,1563791636,[&amp;quot;Alejandro&amp;quot;]
+,0]
+,[,930637752,[&amp;quot;25&amp;quot;]
+,0]
+,[,351010933,[&amp;quot;Male&amp;quot;]
+,0]
+]
+,,&amp;quot;-5294445733973195140&amp;quot;]
+" name="draftResponse" /&gt;
+&lt;input type="hidden" value="0,1" name="pageHistory" /&gt;
+
+
+&lt;input type="hidden" value="-5294445733973195140" name="fbzx" /&gt;
+
+&lt;div class="ss-item ss-navigate"&gt;&lt;table id="navigation-table"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td dir="ltr" id="navigation-buttons" class="ss-form-entry goog-inline-block"&gt;&lt;input type="submit" class="jfk-button jfk-button-standard " formnovalidate="" id="ss-back-button" value="« Bumalik" name="back" /&gt;
+&lt;input type="submit" class="jfk-button jfk-button-action " id="ss-submit" value="Isumite" name="submit" /&gt;
+&lt;div class="ss-password-warning ss-secondary-text"&gt;Huwag isumite kailanman ang mga password sa pamamagitan ng Google Forms.&lt;/div&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/ol&gt;&lt;/form&gt;&lt;/div&gt;
+&lt;div class="ss-footer"&gt;&lt;div class="ss-attribution"&gt;&lt;/div&gt;
+&lt;div class="ss-legal"&gt;&lt;div class="disclaimer-separator"&gt;&lt;/div&gt;
+&lt;div dir="ltr" class="disclaimer"&gt;&lt;div class="powered-by-logo"&gt;&lt;span class="powered-by-text"&gt;Pinagagana ng&lt;/span&gt;
+&lt;a href="https://www.google.com/forms/about/?utm_source=product&amp;amp;utm_medium=forms_logo&amp;amp;utm_campaign=forms"&gt;&lt;div class="ss-logo-container ss-logo-css-container"&gt;&lt;div class="ss-logo-image"&gt;&lt;/div&gt;
+&lt;span class="aria-only-help"&gt;Google Forms&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="ss-terms"&gt;&lt;span class="disclaimer-msg"&gt;Hindi itinaguyod o inindorso ng Google ang nilalamang ito.&lt;/span&gt;
+&lt;br /&gt;
+&lt;a href="https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/reportabuse?source=https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform"&gt;I-ulat ang Pag-abuso&lt;/a&gt;
+-
+&lt;a href="http://www.google.com/accounts/TOS"&gt;Mga Tuntunin ng Serbisyo&lt;/a&gt;
+-
+&lt;a href="http://www.google.com/google-d-s/terms.html"&gt;Mga karagdagang mga Term&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div aria-atomic="" role="region" aria-live="assertive" class="docs-a11y-ariascreenreader-speakable docs-offscreen" id="docs-aria-speakable"&gt;Gumagana ang suporta sa screen reader. &lt;/div&gt;&lt;/div&gt;
+
+
+&lt;script src="/static/forms/client/js/2929280083-formviewer_prd__fil.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;H5F.setup(document.getElementById('ss-form'));
+          _initFormViewer(
+            "[100,,[]\n]\n");&lt;/script&gt;&lt;/div&gt;&lt;/body&gt;&lt;canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1233" height="698"&gt;&lt;/canvas&gt;&lt;/html&gt;</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150127 23:56:09.607" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150127 23:56:09.607" starttime="20150127 23:56:09.318"></status>
+</kw>
+<msg timestamp="20150127 23:56:09.608" level="FAIL">Page should have contained checkbox 'Basketball' but did not</msg>
+<status status="FAIL" endtime="20150127 23:56:09.608" starttime="20150127 23:56:08.671"></status>
+</kw>
+<status status="FAIL" endtime="20150127 23:56:09.609" starttime="20150127 23:56:08.670"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150127 23:56:09.609" critical="yes" starttime="20150127 23:56:04.668">Page should have contained checkbox 'Basketball' but did not</status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150127 23:56:09.868" starttime="20150127 23:56:09.611"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20150127 23:56:09.868" starttime="20150127 23:55:46.631"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="4">Critical Tests</stat>
+<stat fail="1" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="4" id="s1" name="Ts Validation">Ts Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

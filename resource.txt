@@ -1,0 +1,72 @@
+*** Variables ***
+${BROWSER}	Firefox
+${DELAY}	0.2
+${FORM URL}	https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140
+
+
+*** Keywords ***
+Open Browser To Test Page
+	Open Browser    ${FORM URL}    ${BROWSER}
+	Set Selenium Speed	${DELAY}
+	Maximize Browser Window
+	Test Form Should Be Open
+
+Test Form Should Be Open
+	Wait Until Page Contains Element	continue
+	Capture Page Screenshot
+	
+Verify Text Display
+	[Arguments]	${text}
+	Page Should Contain	${text}
+
+Verify Name Input Field Display
+	Page Should Contain Textfield	entry.1563791636
+
+Verify Age Input Field Display
+	Page Should Contain Element	entry.930637752
+	
+Verify Gender Radio Buttons Display
+	Page Should Contain Radio Button	Male
+	Page Should Contain Radio Button	Female
+
+Verify Sport Checkbox Display
+	[Arguments]	${sport name}
+	Page Should Contain Checkbox	${sport name}
+	
+Enter Name
+	[Arguments]	${name}
+	Input Text	entry.1563791636	${name}
+
+Enter Age
+	[Arguments]	${age}
+	Input Text	entry.930637752	${age}
+
+Select Gender
+	[Arguments]	${gender}
+	Select Radio Button	entry.351010933	${gender}
+
+Select Sport
+	[Arguments]	${sport}
+	Select Checkbox	${sport}
+
+Continue to Next Page
+	Click Button    continue
+	Capture Page Screenshot
+
+Back to First Page
+	Click Button    back
+	Wait Until Page Contains	Gender
+	Capture Page Screenshot
+
+Submit Response
+	Click Button	submit
+
+Reload the Page
+	Reload Page
+	
+Response Is Successfully Recorded
+	Capture Page Screenshot
+	Page Should Contain	Your response has been recorded
+
+Response Is Not Accepted
+	Page Should Not Contain	Sports
