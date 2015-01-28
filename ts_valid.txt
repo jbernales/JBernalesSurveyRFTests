@@ -1,29 +1,19 @@
 *** Settings ***
 Resource	resource.txt
 Library		Selenium2Library
-Test Template	Submit Valid Response
-Test Setup	Open Browser To Test Page
-Test Teardown	Close Browser
-
-*** Test Cases ***	Name	Age	Gender	Sport
-5 Chars Name, Age 5, Male, Wrestling	A5chr	5	Male	Wrestling
-
-15 Chars Name, Age 45, Female, Volleyball	A15chractername	45	Female	Volleyball
-
-25 Chars Name, Age 85, Male, MMA	A25characternameleandrast	85	Male	MMA	
-
-35 Chars Name, Age 125, Female, Gymnastics	A35characternameleandrastanalizalee	125	Female	Gymnastics
-
-50 Chars Name, Age 150, Male, Wrestling	A50characternameleandrastanalizaleeleandromunozcla	150	Male	Wrestling
 
 *** Keywords ***
-Submit Valid Response
-	[Arguments]	${name}	${age}	${gender}	${sport}
-	Enter Name	${name}
-	Enter Age	${age}
-	Select Gender	${gender}
-	Continue to Next Page
-	Select Sport	${sport}
-	Submit Response
-	Response Is Successfully Recorded
-	
+5Char Name, Age5, Male, Wrestling Should Pass
+    Submit Response Is Successful   A5chr	5	Male	Wrestling
+
+15Char Name, Age45, Female, Volleyball Should Pass
+    Submit Response Is Successful   A15chractername	45	Female	Volleyball
+
+25Char Name, Age85, Male, MMA Should Pass
+    Submit Response Is Successful   A25characternameleandrast	85	Male	MMA
+
+35Char Name, Age125, Female, Gymnastics Should Pass
+    Submit Response Is Successful   A35characternameleandrastanalizalee	125	Female	Gymnastics
+
+50Char Name, Age150, Male, Wrestling Should Pass
+    Submit Response Is Successful   A50characternameleandrastanalizaleeleandromunozcla	150	Male    Wrestling

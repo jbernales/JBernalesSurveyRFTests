@@ -13,7 +13,6 @@ Open Browser To Test Page
 
 Test Form Should Be Open
 	Wait Until Page Contains Element	continue
-	Capture Page Screenshot
 	
 Verify Text Display
 	[Arguments]	${text}
@@ -35,11 +34,13 @@ Verify Sport Checkbox Display
 	
 Enter Name
 	[Arguments]	${name}
-	Input Text	entry.1563791636	${name}
+    Clear Element Text  entry.1563791636
+	Input Text          entry.1563791636	${name}
 
 Enter Age
 	[Arguments]	${age}
-	Input Text	entry.930637752	${age}
+    Clear Element Text  entry.930637752
+    Input Text          entry.930637752	${age}
 
 Select Gender
 	[Arguments]	${gender}
@@ -51,22 +52,31 @@ Select Sport
 
 Continue to Next Page
 	Click Button    continue
-	Capture Page Screenshot
 
 Back to First Page
 	Click Button    back
 	Wait Until Page Contains	Gender
-	Capture Page Screenshot
 
-Submit Response
+Click Submit
 	Click Button	submit
 
-Reload the Page
-	Reload Page
-	
-Response Is Successfully Recorded
-	Capture Page Screenshot
-	Page Should Contain	Your response has been recorded
+Click Submit Another Response
+    Click Link  Magsumite ng iba pang tugon
 
-Response Is Not Accepted
-	Page Should Not Contain	Sports
+Submit Response
+    [Arguments]	${name}	${age}	${gender}	${sport}
+    Enter Name	${name}
+    Enter Age	${age}
+    Select Gender	${gender}
+    Continue to Next Page
+    Select Sport	${sport}
+    Click Submit
+
+Submit Response Is Successful
+    [Arguments]	${name}	${age}	${gender}	${sport}
+    Submit Response     ${name}	${age}	${gender}	${sport}
+    Response Is Successfully Recorded
+    Click Submit Another Response
+
+Response Is Successfully Recorded
+	Page Should Contain	Your response has been recorded

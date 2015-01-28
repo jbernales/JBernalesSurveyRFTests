@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150127 23:55:46.630" generator="Robot 2.8.7 (Python 2.7.9 on darwin)">
-<suite source="/Users/globalvillageconsultingasiapacific/Documents/PROJECTS/Robot/ts_validation.txt" id="s1" name="Ts Validation">
+<robot generated="20150128 15:26:34.370" generator="Robot 2.8.7 (Python 2.7.9 on darwin)">
+<suite source="/Users/globalvillageconsultingasiapacific/Documents/PROJECTS/Robot/RobotTest/suite_testdata.txt" id="s1" name="Suite Testdata">
+<test id="s1-t1" name="All Invalid Input Should Fail">
 <kw type="setup" name="resource.Open Browser To Test Page">
 <doc></doc>
 <arguments>
@@ -11,21 +12,21 @@
 <arg>${FORM URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:46.749" level="INFO">Opening browser 'Firefox' to base url 'https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140'</msg>
-<status status="PASS" endtime="20150127 23:55:52.353" starttime="20150127 23:55:46.748"></status>
+<msg timestamp="20150128 15:26:34.503" level="INFO">Opening browser 'Firefox' to base url 'https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140'</msg>
+<status status="PASS" endtime="20150128 15:26:39.520" starttime="20150128 15:26:34.503"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Set Selenium Speed">
 <doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20150127 23:55:52.354" starttime="20150127 23:55:52.354"></status>
+<status status="PASS" endtime="20150128 15:26:39.521" starttime="20150128 15:26:39.520"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Maximize Browser Window">
 <doc>Maximizes current browser window.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150127 23:55:52.946" starttime="20150127 23:55:52.354"></status>
+<status status="PASS" endtime="20150128 15:26:40.155" starttime="20150128 15:26:39.521"></status>
 </kw>
 <kw type="kw" name="resource.Test Form Should Be Open">
 <doc></doc>
@@ -36,20 +37,953 @@
 <arguments>
 <arg>continue</arg>
 </arguments>
-<status status="PASS" endtime="20150127 23:55:53.236" starttime="20150127 23:55:52.947"></status>
+<status status="PASS" endtime="20150128 15:26:40.406" starttime="20150128 15:26:40.156"></status>
 </kw>
+<status status="PASS" endtime="20150128 15:26:40.406" starttime="20150128 15:26:40.155"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:40.407" starttime="20150128 15:26:34.501"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Empty Name Should Fail</arg>
+</arguments>
+<kw type="kw" name="ts_invalid.Empty Name Should Fail">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>Submit Response Is Successful</arg>
+<arg>${empty}</arg>
+<arg>5</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>${empty}</arg>
+<arg>5</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:40.848" starttime="20150128 15:26:40.412"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:40.849" level="INFO">Typing text '' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:26:41.512" starttime="20150128 15:26:40.849"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:41.513" starttime="20150128 15:26:40.411"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:26:41.618" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:26:41.618" starttime="20150128 15:26:41.514"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:42.051" starttime="20150128 15:26:41.619"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:42.052" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:42.714" starttime="20150128 15:26:42.052"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:42.715" level="INFO">Typing text '5' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:43.375" starttime="20150128 15:26:42.715"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:43.375" starttime="20150128 15:26:41.513"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:43.377" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:26:44.068" starttime="20150128 15:26:43.377"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:44.068" starttime="20150128 15:26:43.376"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:26:44.069" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:26:44.757" starttime="20150128 15:26:44.069"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:44.757" starttime="20150128 15:26:44.068"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:44.759" level="INFO">Selecting checkbox 'Wrestling'.</msg>
 <kw type="kw" name="Selenium2Library.Capture Page Screenshot">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
 <arguments>
 </arguments>
-<msg timestamp="20150127 23:55:53.524" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150127 23:55:53.524" starttime="20150127 23:55:53.236"></status>
+<msg timestamp="20150128 15:26:45.533" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150128 15:26:45.533" starttime="20150128 15:26:45.175"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:53.524" starttime="20150127 23:55:52.946"></status>
+<msg timestamp="20150128 15:26:45.534" level="FAIL">ValueError: Element locator 'Wrestling' did not match any elements.</msg>
+<status status="FAIL" endtime="20150128 15:26:45.534" starttime="20150128 15:26:44.758"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:53.525" starttime="20150127 23:55:46.748"></status>
+<status status="FAIL" endtime="20150128 15:26:45.534" starttime="20150128 15:26:44.758"></status>
 </kw>
-<test id="s1-t1" name="Verify Name field is displayed">
+<status status="FAIL" endtime="20150128 15:26:45.535" starttime="20150128 15:26:40.410"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:45.535" starttime="20150128 15:26:40.409"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:45.535" starttime="20150128 15:26:40.409"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:45.536" starttime="20150128 15:26:40.408"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:45.536" starttime="20150128 15:26:40.407"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Empty Age Should Fail</arg>
+</arguments>
+<kw type="kw" name="ts_invalid.Empty Age Should Fail">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>Submit Response Is Successful</arg>
+<arg>Alexander</arg>
+<arg>${empty}</arg>
+<arg>Female</arg>
+<arg>Volleyball</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>Alexander</arg>
+<arg>${empty}</arg>
+<arg>Female</arg>
+<arg>Volleyball</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:45.973" starttime="20150128 15:26:45.540"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:45.974" level="INFO">Typing text 'Alexander' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:26:46.658" starttime="20150128 15:26:45.974"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:46.659" starttime="20150128 15:26:45.539"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:26:46.763" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:26:46.764" starttime="20150128 15:26:46.660"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:47.196" starttime="20150128 15:26:46.764"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:47.197" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:47.850" starttime="20150128 15:26:47.196"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:47.851" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:48.508" starttime="20150128 15:26:47.851"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:48.509" starttime="20150128 15:26:46.659"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:48.510" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:26:49.207" starttime="20150128 15:26:48.510"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:49.208" starttime="20150128 15:26:48.509"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:26:49.210" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:26:49.921" starttime="20150128 15:26:49.210"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:49.921" starttime="20150128 15:26:49.209"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:49.923" level="INFO">Selecting checkbox 'Volleyball'.</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150128 15:26:50.639" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150128 15:26:50.639" starttime="20150128 15:26:50.348"></status>
+</kw>
+<msg timestamp="20150128 15:26:50.639" level="FAIL">ValueError: Element locator 'Volleyball' did not match any elements.</msg>
+<status status="FAIL" endtime="20150128 15:26:50.639" starttime="20150128 15:26:49.923"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:50.640" starttime="20150128 15:26:49.921"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:50.640" starttime="20150128 15:26:45.538"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:50.640" starttime="20150128 15:26:45.538"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:50.640" starttime="20150128 15:26:45.537"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:50.641" starttime="20150128 15:26:45.537"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:50.641" starttime="20150128 15:26:45.536"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Negative Age Should Fail</arg>
+</arguments>
+<kw type="kw" name="ts_invalid.Negative Age Should Fail">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>Submit Response Is Successful</arg>
+<arg>Ricardo</arg>
+<arg>-25</arg>
+<arg>Female</arg>
+<arg>Gymnastics</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>Ricardo</arg>
+<arg>-25</arg>
+<arg>Female</arg>
+<arg>Gymnastics</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:51.075" starttime="20150128 15:26:50.646"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:51.076" level="INFO">Typing text 'Ricardo' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:26:51.746" starttime="20150128 15:26:51.076"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:51.747" starttime="20150128 15:26:50.645"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:26:51.851" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:26:51.852" starttime="20150128 15:26:51.748"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:52.283" starttime="20150128 15:26:51.852"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:52.284" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:52.937" starttime="20150128 15:26:52.284"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:52.938" level="INFO">Typing text '-25' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:26:53.594" starttime="20150128 15:26:52.937"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:53.595" starttime="20150128 15:26:51.747"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:53.597" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:26:54.042" starttime="20150128 15:26:53.596"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:54.043" starttime="20150128 15:26:53.595"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:26:54.045" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:26:55.276" starttime="20150128 15:26:54.044"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:55.277" starttime="20150128 15:26:54.043"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:55.279" level="INFO">Selecting checkbox 'Gymnastics'.</msg>
+<status status="PASS" endtime="20150128 15:26:56.180" starttime="20150128 15:26:55.278"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:56.181" starttime="20150128 15:26:55.277"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:26:56.182" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:26:57.444" starttime="20150128 15:26:56.182"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:57.444" starttime="20150128 15:26:56.181"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:57.444" starttime="20150128 15:26:50.644"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:26:57.869" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:26:57.870" starttime="20150128 15:26:57.446"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:57.870" starttime="20150128 15:26:57.445"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:26:57.871" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:26:58.962" starttime="20150128 15:26:57.871"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:58.963" starttime="20150128 15:26:57.870"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:26:58.963" starttime="20150128 15:26:50.643"></status>
+</kw>
+<msg timestamp="20150128 15:26:58.971" level="FAIL">Expected error '*' did not occur.</msg>
+<status status="FAIL" endtime="20150128 15:26:58.971" starttime="20150128 15:26:50.642"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:58.971" starttime="20150128 15:26:50.642"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:26:58.972" starttime="20150128 15:26:50.641"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Less than 5 Age Should Fail</arg>
+</arguments>
+<kw type="kw" name="ts_invalid.Less than 5 Age Should Fail">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>Submit Response Is Successful</arg>
+<arg>Mercedez</arg>
+<arg>1</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>Mercedez</arg>
+<arg>1</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:26:59.408" starttime="20150128 15:26:58.976"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:26:59.410" level="INFO">Typing text 'Mercedez' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:00.104" starttime="20150128 15:26:59.409"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:00.105" starttime="20150128 15:26:58.975"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:00.212" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:00.212" starttime="20150128 15:27:00.106"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:00.642" starttime="20150128 15:27:00.212"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:00.643" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:01.320" starttime="20150128 15:27:00.643"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:01.322" level="INFO">Typing text '1' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:01.980" starttime="20150128 15:27:01.321"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:01.980" starttime="20150128 15:27:00.105"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:01.982" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:27:02.679" starttime="20150128 15:27:01.982"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:02.680" starttime="20150128 15:27:01.981"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:27:02.681" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:27:03.872" starttime="20150128 15:27:02.681"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:03.872" starttime="20150128 15:27:02.680"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:03.874" level="INFO">Selecting checkbox 'Wrestling'.</msg>
+<status status="PASS" endtime="20150128 15:27:04.781" starttime="20150128 15:27:03.874"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:04.782" starttime="20150128 15:27:03.873"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:27:04.783" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:27:06.016" starttime="20150128 15:27:04.783"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:06.016" starttime="20150128 15:27:04.782"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:06.017" starttime="20150128 15:26:58.974"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:27:06.445" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:27:06.445" starttime="20150128 15:27:06.018"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:06.445" starttime="20150128 15:27:06.017"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:27:06.447" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:27:07.564" starttime="20150128 15:27:06.446"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:07.565" starttime="20150128 15:27:06.446"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:07.565" starttime="20150128 15:26:58.974"></status>
+</kw>
+<msg timestamp="20150128 15:27:07.565" level="FAIL">Expected error '*' did not occur.</msg>
+<status status="FAIL" endtime="20150128 15:27:07.566" starttime="20150128 15:26:58.973"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:07.566" starttime="20150128 15:26:58.972"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:07.566" starttime="20150128 15:26:58.972"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Non-numeric Age Should Fail</arg>
+</arguments>
+<kw type="kw" name="ts_invalid.Non-numeric Age Should Fail">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword And Expect Error">
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<arguments>
+<arg>*</arg>
+<arg>Submit Response Is Successful</arg>
+<arg>Beatriz</arg>
+<arg>Z</arg>
+<arg>Male</arg>
+<arg>MMA</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>Beatriz</arg>
+<arg>Z</arg>
+<arg>Male</arg>
+<arg>MMA</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:08.006" starttime="20150128 15:27:07.571"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:08.007" level="INFO">Typing text 'Beatriz' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:08.687" starttime="20150128 15:27:08.006"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:08.687" starttime="20150128 15:27:07.570"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:08.793" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:08.793" starttime="20150128 15:27:08.688"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:09.229" starttime="20150128 15:27:08.793"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:09.230" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:09.885" starttime="20150128 15:27:09.229"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:09.886" level="INFO">Typing text 'Z' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:10.547" starttime="20150128 15:27:09.885"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:10.547" starttime="20150128 15:27:08.687"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:10.549" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:27:11.248" starttime="20150128 15:27:10.549"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:11.249" starttime="20150128 15:27:10.548"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:27:11.250" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:27:11.942" starttime="20150128 15:27:11.250"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:11.942" starttime="20150128 15:27:11.249"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:11.944" level="INFO">Selecting checkbox 'MMA'.</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20150128 15:27:12.651" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150128 15:27:12.651" starttime="20150128 15:27:12.363"></status>
+</kw>
+<msg timestamp="20150128 15:27:12.652" level="FAIL">ValueError: Element locator 'MMA' did not match any elements.</msg>
+<status status="FAIL" endtime="20150128 15:27:12.652" starttime="20150128 15:27:11.944"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:12.652" starttime="20150128 15:27:11.943"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:12.652" starttime="20150128 15:27:07.569"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:12.653" starttime="20150128 15:27:07.568"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:12.653" starttime="20150128 15:27:07.568"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:12.653" starttime="20150128 15:27:07.567"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:12.653" starttime="20150128 15:27:07.567"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:12.905" starttime="20150128 15:27:12.654"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150128 15:27:12.905" critical="yes" starttime="20150128 15:26:34.500">Several failures occurred:
+
+1) Expected error '*' did not occur.
+
+2) Expected error '*' did not occur.</status>
+</test>
+<test id="s1-t2" name="All Field Labels And Elements Should Be Displayed">
+<kw type="setup" name="resource.Open Browser To Test Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${FORM URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:12.911" level="INFO">Opening browser 'Firefox' to base url 'https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140'</msg>
+<status status="PASS" endtime="20150128 15:27:20.053" starttime="20150128 15:27:12.910"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:20.054" starttime="20150128 15:27:20.054"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:20.658" starttime="20150128 15:27:20.055"></status>
+</kw>
+<kw type="kw" name="resource.Test Form Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:20.949" starttime="20150128 15:27:20.659"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:20.950" starttime="20150128 15:27:20.659"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:20.950" starttime="20150128 15:27:12.909"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Name Field Should Be Displayed</arg>
+</arguments>
+<kw type="kw" name="ts_validation.Verify Name Field Should Be Displayed">
+<doc></doc>
+<arguments>
+</arguments>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
 <arguments>
@@ -60,10 +994,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:53.956" level="INFO">Current page contains text 'Name'.</msg>
-<status status="PASS" endtime="20150127 23:55:53.956" starttime="20150127 23:55:53.527"></status>
+<msg timestamp="20150128 15:27:21.377" level="INFO">Current page contains text 'Name'.</msg>
+<status status="PASS" endtime="20150128 15:27:21.377" starttime="20150128 15:27:20.953"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:53.957" starttime="20150127 23:55:53.526"></status>
+<status status="PASS" endtime="20150128 15:27:21.378" starttime="20150128 15:27:20.952"></status>
 </kw>
 <kw type="kw" name="resource.Verify Name Input Field Display">
 <doc></doc>
@@ -74,17 +1008,24 @@
 <arguments>
 <arg>entry.1563791636</arg>
 </arguments>
-<msg timestamp="20150127 23:55:54.382" level="INFO">Current page contains text field 'entry.1563791636'.</msg>
-<status status="PASS" endtime="20150127 23:55:54.382" starttime="20150127 23:55:53.958"></status>
+<msg timestamp="20150128 15:27:21.802" level="INFO">Current page contains text field 'entry.1563791636'.</msg>
+<status status="PASS" endtime="20150128 15:27:21.802" starttime="20150128 15:27:21.379"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:54.383" starttime="20150127 23:55:53.957"></status>
+<status status="PASS" endtime="20150128 15:27:21.802" starttime="20150128 15:27:21.378"></status>
 </kw>
+<status status="PASS" endtime="20150128 15:27:21.802" starttime="20150128 15:27:20.951"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:21.803" starttime="20150128 15:27:20.951"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Age Field Should Be Displayed</arg>
+</arguments>
+<kw type="kw" name="ts_validation.Verify Age Field Should Be Displayed">
 <doc></doc>
-<tags>
-</tags>
-<status status="PASS" endtime="20150127 23:55:54.383" critical="yes" starttime="20150127 23:55:53.525"></status>
-</test>
-<test id="s1-t2" name="Verify Age field is displayed">
+<arguments>
+</arguments>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
 <arguments>
@@ -95,10 +1036,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:54.808" level="INFO">Current page contains text 'Age'.</msg>
-<status status="PASS" endtime="20150127 23:55:54.808" starttime="20150127 23:55:54.385"></status>
+<msg timestamp="20150128 15:27:22.230" level="INFO">Current page contains text 'Age'.</msg>
+<status status="PASS" endtime="20150128 15:27:22.230" starttime="20150128 15:27:21.805"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:54.809" starttime="20150127 23:55:54.385"></status>
+<status status="PASS" endtime="20150128 15:27:22.230" starttime="20150128 15:27:21.804"></status>
 </kw>
 <kw type="kw" name="resource.Verify Age Input Field Display">
 <doc></doc>
@@ -109,17 +1050,24 @@
 <arguments>
 <arg>entry.930637752</arg>
 </arguments>
-<msg timestamp="20150127 23:55:55.023" level="INFO">Current page contains element 'entry.930637752'.</msg>
-<status status="PASS" endtime="20150127 23:55:55.023" starttime="20150127 23:55:54.810"></status>
+<msg timestamp="20150128 15:27:22.442" level="INFO">Current page contains element 'entry.930637752'.</msg>
+<status status="PASS" endtime="20150128 15:27:22.443" starttime="20150128 15:27:22.231"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:55.024" starttime="20150127 23:55:54.809"></status>
+<status status="PASS" endtime="20150128 15:27:22.443" starttime="20150128 15:27:22.231"></status>
 </kw>
+<status status="PASS" endtime="20150128 15:27:22.443" starttime="20150128 15:27:21.803"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:22.444" starttime="20150128 15:27:21.803"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Gender Field Should Be Displayed</arg>
+</arguments>
+<kw type="kw" name="ts_validation.Verify Gender Field Should Be Displayed">
 <doc></doc>
-<tags>
-</tags>
-<status status="PASS" endtime="20150127 23:55:55.024" critical="yes" starttime="20150127 23:55:54.384"></status>
-</test>
-<test id="s1-t3" name="Verify Gender field is displayed">
+<arguments>
+</arguments>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
 <arguments>
@@ -130,10 +1078,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:55.452" level="INFO">Current page contains text 'Gender'.</msg>
-<status status="PASS" endtime="20150127 23:55:55.453" starttime="20150127 23:55:55.026"></status>
+<msg timestamp="20150128 15:27:22.866" level="INFO">Current page contains text 'Gender'.</msg>
+<status status="PASS" endtime="20150128 15:27:22.867" starttime="20150128 15:27:22.446"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:55.453" starttime="20150127 23:55:55.026"></status>
+<status status="PASS" endtime="20150128 15:27:22.867" starttime="20150128 15:27:22.445"></status>
 </kw>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
@@ -145,10 +1093,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:55.878" level="INFO">Current page contains text 'Male'.</msg>
-<status status="PASS" endtime="20150127 23:55:55.878" starttime="20150127 23:55:55.454"></status>
+<msg timestamp="20150128 15:27:23.290" level="INFO">Current page contains text 'Male'.</msg>
+<status status="PASS" endtime="20150128 15:27:23.291" starttime="20150128 15:27:22.868"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:55.878" starttime="20150127 23:55:55.453"></status>
+<status status="PASS" endtime="20150128 15:27:23.291" starttime="20150128 15:27:22.867"></status>
 </kw>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
@@ -160,10 +1108,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:56.304" level="INFO">Current page contains text 'Female'.</msg>
-<status status="PASS" endtime="20150127 23:55:56.305" starttime="20150127 23:55:55.880"></status>
+<msg timestamp="20150128 15:27:23.842" level="INFO">Current page contains text 'Female'.</msg>
+<status status="PASS" endtime="20150128 15:27:23.843" starttime="20150128 15:27:23.292"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:56.305" starttime="20150127 23:55:55.879"></status>
+<status status="PASS" endtime="20150128 15:27:23.843" starttime="20150128 15:27:23.292"></status>
 </kw>
 <kw type="kw" name="resource.Verify Gender Radio Buttons Display">
 <doc></doc>
@@ -174,56 +1122,94 @@
 <arguments>
 <arg>Male</arg>
 </arguments>
-<msg timestamp="20150127 23:55:56.728" level="INFO">Current page contains radio button 'Male'.</msg>
-<status status="PASS" endtime="20150127 23:55:56.728" starttime="20150127 23:55:56.306"></status>
+<msg timestamp="20150128 15:27:24.260" level="INFO">Current page contains radio button 'Male'.</msg>
+<status status="PASS" endtime="20150128 15:27:24.260" starttime="20150128 15:27:23.845"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Page Should Contain Radio Button">
 <doc>Verifies radio button identified by `locator` is found from current page.</doc>
 <arguments>
 <arg>Female</arg>
 </arguments>
-<msg timestamp="20150127 23:55:57.144" level="INFO">Current page contains radio button 'Female'.</msg>
-<status status="PASS" endtime="20150127 23:55:57.145" starttime="20150127 23:55:56.728"></status>
+<msg timestamp="20150128 15:27:24.680" level="INFO">Current page contains radio button 'Female'.</msg>
+<status status="PASS" endtime="20150128 15:27:24.680" starttime="20150128 15:27:24.261"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:57.145" starttime="20150127 23:55:56.305"></status>
+<status status="PASS" endtime="20150128 15:27:24.681" starttime="20150128 15:27:23.844"></status>
 </kw>
+<status status="PASS" endtime="20150128 15:27:24.681" starttime="20150128 15:27:22.444"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:24.681" starttime="20150128 15:27:22.444"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Sports(Women) Field Should Be Displayed</arg>
+</arguments>
+<kw type="kw" name="ts_validation.Verify Sports(Women) Field Should Be Displayed">
 <doc></doc>
-<tags>
-</tags>
-<status status="PASS" endtime="20150127 23:55:57.145" critical="yes" starttime="20150127 23:55:55.025"></status>
-</test>
-<test id="s1-t4" name="Verify Sports(Women) field is displayed">
+<arguments>
+</arguments>
 <kw type="kw" name="resource.Enter Name">
 <doc></doc>
 <arguments>
 <arg>Christina</arg>
 </arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:25.120" starttime="20150128 15:27:24.684"></status>
+</kw>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>entry.1563791636</arg>
 <arg>${name}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:57.148" level="INFO">Typing text 'Christina' into text field 'entry.1563791636'</msg>
-<status status="PASS" endtime="20150127 23:55:57.833" starttime="20150127 23:55:57.148"></status>
+<msg timestamp="20150128 15:27:25.122" level="INFO">Typing text 'Christina' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:25.803" starttime="20150128 15:27:25.121"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:57.833" starttime="20150127 23:55:57.147"></status>
+<status status="PASS" endtime="20150128 15:27:25.803" starttime="20150128 15:27:24.683"></status>
 </kw>
 <kw type="kw" name="resource.Enter Age">
 <doc></doc>
 <arguments>
 <arg>35</arg>
 </arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:25.908" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:25.908" starttime="20150128 15:27:25.804"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:26.342" starttime="20150128 15:27:25.908"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:26.343" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:27.004" starttime="20150128 15:27:26.343"></status>
+</kw>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>entry.930637752</arg>
 <arg>${age}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:57.835" level="INFO">Typing text '35' into text field 'entry.930637752'</msg>
-<status status="PASS" endtime="20150127 23:55:58.524" starttime="20150127 23:55:57.834"></status>
+<msg timestamp="20150128 15:27:27.005" level="INFO">Typing text '35' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:27.667" starttime="20150128 15:27:27.004"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:58.524" starttime="20150127 23:55:57.834"></status>
+<status status="PASS" endtime="20150128 15:27:27.667" starttime="20150128 15:27:25.804"></status>
 </kw>
 <kw type="kw" name="resource.Select Gender">
 <doc></doc>
@@ -236,10 +1222,10 @@
 <arg>entry.351010933</arg>
 <arg>${gender}</arg>
 </arguments>
-<msg timestamp="20150127 23:55:58.526" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
-<status status="PASS" endtime="20150127 23:55:59.221" starttime="20150127 23:55:58.525"></status>
+<msg timestamp="20150128 15:27:27.669" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:27:28.358" starttime="20150128 15:27:27.668"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:55:59.222" starttime="20150127 23:55:58.525"></status>
+<status status="PASS" endtime="20150128 15:27:28.359" starttime="20150128 15:27:27.667"></status>
 </kw>
 <kw type="kw" name="resource.Continue to Next Page">
 <doc></doc>
@@ -250,17 +1236,10 @@
 <arguments>
 <arg>continue</arg>
 </arguments>
-<msg timestamp="20150127 23:55:59.223" level="INFO">Clicking button 'continue'.</msg>
-<status status="PASS" endtime="20150127 23:56:00.392" starttime="20150127 23:55:59.223"></status>
+<msg timestamp="20150128 15:27:28.360" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:27:29.698" starttime="20150128 15:27:28.360"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<arguments>
-</arguments>
-<msg timestamp="20150127 23:56:00.678" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150127 23:56:00.679" starttime="20150127 23:56:00.392"></status>
-</kw>
-<status status="PASS" endtime="20150127 23:56:00.679" starttime="20150127 23:55:59.222"></status>
+<status status="PASS" endtime="20150128 15:27:29.699" starttime="20150128 15:27:28.359"></status>
 </kw>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
@@ -272,10 +1251,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:01.109" level="INFO">Current page contains text 'Sports (Women)'.</msg>
-<status status="PASS" endtime="20150127 23:56:01.109" starttime="20150127 23:56:00.680"></status>
+<msg timestamp="20150128 15:27:30.122" level="INFO">Current page contains text 'Sports (Women)'.</msg>
+<status status="PASS" endtime="20150128 15:27:30.123" starttime="20150128 15:27:29.700"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:01.110" starttime="20150127 23:56:00.679"></status>
+<status status="PASS" endtime="20150128 15:27:30.123" starttime="20150128 15:27:29.699"></status>
 </kw>
 <kw type="kw" name="resource.Verify Sport Checkbox Display">
 <doc></doc>
@@ -287,10 +1266,10 @@
 <arguments>
 <arg>${sport name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:01.534" level="INFO">Current page contains checkbox 'Volleyball'.</msg>
-<status status="PASS" endtime="20150127 23:56:01.534" starttime="20150127 23:56:01.111"></status>
+<msg timestamp="20150128 15:27:30.542" level="INFO">Current page contains checkbox 'Volleyball'.</msg>
+<status status="PASS" endtime="20150128 15:27:30.543" starttime="20150128 15:27:30.124"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:01.534" starttime="20150127 23:56:01.110"></status>
+<status status="PASS" endtime="20150128 15:27:30.543" starttime="20150128 15:27:30.123"></status>
 </kw>
 <kw type="kw" name="resource.Verify Sport Checkbox Display">
 <doc></doc>
@@ -302,10 +1281,10 @@
 <arguments>
 <arg>${sport name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:01.952" level="INFO">Current page contains checkbox 'Swimming'.</msg>
-<status status="PASS" endtime="20150127 23:56:01.953" starttime="20150127 23:56:01.536"></status>
+<msg timestamp="20150128 15:27:30.969" level="INFO">Current page contains checkbox 'Swimming'.</msg>
+<status status="PASS" endtime="20150128 15:27:30.969" starttime="20150128 15:27:30.544"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:01.953" starttime="20150127 23:56:01.535"></status>
+<status status="PASS" endtime="20150128 15:27:30.970" starttime="20150128 15:27:30.544"></status>
 </kw>
 <kw type="kw" name="resource.Verify Sport Checkbox Display">
 <doc></doc>
@@ -317,10 +1296,10 @@
 <arguments>
 <arg>${sport name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:02.377" level="INFO">Current page contains checkbox 'Running'.</msg>
-<status status="PASS" endtime="20150127 23:56:02.377" starttime="20150127 23:56:01.954"></status>
+<msg timestamp="20150128 15:27:31.391" level="INFO">Current page contains checkbox 'Running'.</msg>
+<status status="PASS" endtime="20150128 15:27:31.392" starttime="20150128 15:27:30.971"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:02.378" starttime="20150127 23:56:01.953"></status>
+<status status="PASS" endtime="20150128 15:27:31.392" starttime="20150128 15:27:30.970"></status>
 </kw>
 <kw type="kw" name="resource.Verify Sport Checkbox Display">
 <doc></doc>
@@ -332,10 +1311,14 @@
 <arguments>
 <arg>${sport name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:02.798" level="INFO">Current page contains checkbox 'Gymnastics'.</msg>
-<status status="PASS" endtime="20150127 23:56:02.798" starttime="20150127 23:56:02.379"></status>
+<msg timestamp="20150128 15:27:31.815" level="INFO">Current page contains checkbox 'Gymnastics'.</msg>
+<status status="PASS" endtime="20150128 15:27:31.816" starttime="20150128 15:27:31.393"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:02.798" starttime="20150127 23:56:02.378"></status>
+<status status="PASS" endtime="20150128 15:27:31.816" starttime="20150128 15:27:31.392"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:31.816" starttime="20150128 15:27:24.682"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:31.816" starttime="20150128 15:27:24.682"></status>
 </kw>
 <kw type="kw" name="resource.Back to First Page">
 <doc></doc>
@@ -346,62 +1329,89 @@
 <arguments>
 <arg>back</arg>
 </arguments>
-<msg timestamp="20150127 23:56:02.800" level="INFO">Clicking button 'back'.</msg>
-<status status="PASS" endtime="20150127 23:56:04.164" starttime="20150127 23:56:02.800"></status>
+<msg timestamp="20150128 15:27:31.818" level="INFO">Clicking button 'back'.</msg>
+<status status="PASS" endtime="20150128 15:27:33.030" starttime="20150128 15:27:31.818"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Wait Until Page Contains">
 <doc>Waits until `text` appears on current page.</doc>
 <arguments>
 <arg>Gender</arg>
 </arguments>
-<status status="PASS" endtime="20150127 23:56:04.376" starttime="20150127 23:56:04.164"></status>
+<status status="PASS" endtime="20150128 15:27:33.242" starttime="20150128 15:27:33.030"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" endtime="20150128 15:27:33.243" starttime="20150128 15:27:31.817"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Verify Sports(Men) Field Should Be Displayed</arg>
+</arguments>
+<kw type="kw" name="ts_validation.Verify Sports(Men) Field Should Be Displayed">
+<doc></doc>
 <arguments>
 </arguments>
-<msg timestamp="20150127 23:56:04.667" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150127 23:56:04.667" starttime="20150127 23:56:04.376"></status>
-</kw>
-<status status="PASS" endtime="20150127 23:56:04.667" starttime="20150127 23:56:02.799"></status>
-</kw>
-<doc></doc>
-<tags>
-</tags>
-<status status="PASS" endtime="20150127 23:56:04.668" critical="yes" starttime="20150127 23:55:57.146"></status>
-</test>
-<test id="s1-t5" name="Verify Sports(Men) field is displayed">
 <kw type="kw" name="resource.Enter Name">
 <doc></doc>
 <arguments>
 <arg>Alejandro</arg>
 </arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:33.680" starttime="20150128 15:27:33.245"></status>
+</kw>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>entry.1563791636</arg>
 <arg>${name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:04.671" level="INFO">Typing text 'Alejandro' into text field 'entry.1563791636'</msg>
-<status status="PASS" endtime="20150127 23:56:05.349" starttime="20150127 23:56:04.670"></status>
+<msg timestamp="20150128 15:27:33.681" level="INFO">Typing text 'Alejandro' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:34.346" starttime="20150128 15:27:33.680"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:05.350" starttime="20150127 23:56:04.669"></status>
+<status status="PASS" endtime="20150128 15:27:34.346" starttime="20150128 15:27:33.244"></status>
 </kw>
 <kw type="kw" name="resource.Enter Age">
 <doc></doc>
 <arguments>
 <arg>25</arg>
 </arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:34.448" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:34.449" starttime="20150128 15:27:34.347"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:34.881" starttime="20150128 15:27:34.449"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:34.881" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:35.536" starttime="20150128 15:27:34.881"></status>
+</kw>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>entry.930637752</arg>
 <arg>${age}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:05.352" level="INFO">Typing text '25' into text field 'entry.930637752'</msg>
-<status status="PASS" endtime="20150127 23:56:06.014" starttime="20150127 23:56:05.351"></status>
+<msg timestamp="20150128 15:27:35.537" level="INFO">Typing text '25' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:36.198" starttime="20150128 15:27:35.537"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:06.015" starttime="20150127 23:56:05.350"></status>
+<status status="PASS" endtime="20150128 15:27:36.199" starttime="20150128 15:27:34.347"></status>
 </kw>
 <kw type="kw" name="resource.Select Gender">
 <doc></doc>
@@ -414,10 +1424,10 @@
 <arg>entry.351010933</arg>
 <arg>${gender}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:06.016" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
-<status status="PASS" endtime="20150127 23:56:06.708" starttime="20150127 23:56:06.016"></status>
+<msg timestamp="20150128 15:27:36.201" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:27:36.893" starttime="20150128 15:27:36.200"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:06.708" starttime="20150127 23:56:06.015"></status>
+<status status="PASS" endtime="20150128 15:27:36.893" starttime="20150128 15:27:36.199"></status>
 </kw>
 <kw type="kw" name="resource.Continue to Next Page">
 <doc></doc>
@@ -428,17 +1438,10 @@
 <arguments>
 <arg>continue</arg>
 </arguments>
-<msg timestamp="20150127 23:56:06.710" level="INFO">Clicking button 'continue'.</msg>
-<status status="PASS" endtime="20150127 23:56:07.951" starttime="20150127 23:56:06.710"></status>
+<msg timestamp="20150128 15:27:36.895" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:27:38.014" starttime="20150128 15:27:36.894"></status>
 </kw>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<arguments>
-</arguments>
-<msg timestamp="20150127 23:56:08.243" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150127 23:56:08.243" starttime="20150127 23:56:07.952"></status>
-</kw>
-<status status="PASS" endtime="20150127 23:56:08.243" starttime="20150127 23:56:06.709"></status>
+<status status="PASS" endtime="20150128 15:27:38.015" starttime="20150128 15:27:36.894"></status>
 </kw>
 <kw type="kw" name="resource.Verify Text Display">
 <doc></doc>
@@ -450,10 +1453,10 @@
 <arguments>
 <arg>${text}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:08.669" level="INFO">Current page contains text 'Sports (Men)'.</msg>
-<status status="PASS" endtime="20150127 23:56:08.670" starttime="20150127 23:56:08.245"></status>
+<msg timestamp="20150128 15:27:38.440" level="INFO">Current page contains text 'Sports (Men)'.</msg>
+<status status="PASS" endtime="20150128 15:27:38.441" starttime="20150128 15:27:38.016"></status>
 </kw>
-<status status="PASS" endtime="20150127 23:56:08.670" starttime="20150127 23:56:08.244"></status>
+<status status="PASS" endtime="20150128 15:27:38.441" starttime="20150128 15:27:38.015"></status>
 </kw>
 <kw type="kw" name="resource.Verify Sport Checkbox Display">
 <doc></doc>
@@ -465,7 +1468,7 @@
 <arguments>
 <arg>${sport name}</arg>
 </arguments>
-<msg timestamp="20150127 23:56:09.317" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+<msg timestamp="20150128 15:27:39.080" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
 &lt;link type="image/x-icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png" rel="shortcut icon" /&gt;
 &lt;meta content="text/html; charset=utf-8" http-equiv="Content-type" /&gt;
@@ -798,44 +1801,1016 @@ input[type='text'], input:not([type]), textarea {
 &lt;script src="/static/forms/client/js/2929280083-formviewer_prd__fil.js" type="text/javascript"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;H5F.setup(document.getElementById('ss-form'));
           _initFormViewer(
-            "[100,,[]\n]\n");&lt;/script&gt;&lt;/div&gt;&lt;/body&gt;&lt;canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1233" height="698"&gt;&lt;/canvas&gt;&lt;/html&gt;</msg>
+            "[100,,[]\n]\n");&lt;/script&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
 <kw type="kw" name="Selenium2Library.Capture Page Screenshot">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
 <arguments>
 </arguments>
-<msg timestamp="20150127 23:56:09.607" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150127 23:56:09.607" starttime="20150127 23:56:09.318"></status>
+<msg timestamp="20150128 15:27:39.370" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20150128 15:27:39.370" starttime="20150128 15:27:39.081"></status>
 </kw>
-<msg timestamp="20150127 23:56:09.608" level="FAIL">Page should have contained checkbox 'Basketball' but did not</msg>
-<status status="FAIL" endtime="20150127 23:56:09.608" starttime="20150127 23:56:08.671"></status>
+<msg timestamp="20150128 15:27:39.370" level="FAIL">Page should have contained checkbox 'Basketball' but did not</msg>
+<status status="FAIL" endtime="20150128 15:27:39.371" starttime="20150128 15:27:38.442"></status>
 </kw>
-<status status="FAIL" endtime="20150127 23:56:09.609" starttime="20150127 23:56:08.670"></status>
+<status status="FAIL" endtime="20150128 15:27:39.371" starttime="20150128 15:27:38.441"></status>
 </kw>
-<doc></doc>
-<tags>
-</tags>
-<status status="FAIL" endtime="20150127 23:56:09.609" critical="yes" starttime="20150127 23:56:04.668">Page should have contained checkbox 'Basketball' but did not</status>
-</test>
+<status status="FAIL" endtime="20150128 15:27:39.371" starttime="20150128 15:27:33.243"></status>
+</kw>
+<status status="FAIL" endtime="20150128 15:27:39.372" starttime="20150128 15:27:33.243"></status>
+</kw>
 <kw type="teardown" name="Selenium2Library.Close All Browsers">
 <doc>Closes all open browsers and resets the browser cache.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150127 23:56:09.868" starttime="20150127 23:56:09.611"></status>
+<status status="PASS" endtime="20150128 15:27:39.617" starttime="20150128 15:27:39.373"></status>
 </kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20150128 15:27:39.617" critical="yes" starttime="20150128 15:27:12.906">Page should have contained checkbox 'Basketball' but did not</status>
+</test>
+<test id="s1-t3" name="All Valid Input Should Pass">
+<kw type="setup" name="resource.Open Browser To Test Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${FORM URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:39.621" level="INFO">Opening browser 'Firefox' to base url 'https://docs.google.com/forms/d/12f7orObPipIDCZOOQsIH9_U6kGgEVOGFhd5qgO0myEo/viewform?fbzx=-5294445733973195140'</msg>
+<status status="PASS" endtime="20150128 15:27:46.586" starttime="20150128 15:27:39.620"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:46.587" starttime="20150128 15:27:46.586"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:47.185" starttime="20150128 15:27:46.587"></status>
+</kw>
+<kw type="kw" name="resource.Test Form Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:47.437" starttime="20150128 15:27:47.186"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:47.437" starttime="20150128 15:27:47.185"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:47.437" starttime="20150128 15:27:39.620"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>5Char Name, Age5, Male, Wrestling Should Pass</arg>
+</arguments>
+<kw type="kw" name="ts_valid.5Char Name, Age5, Male, Wrestling Should Pass">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>A5chr</arg>
+<arg>5</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:47.881" starttime="20150128 15:27:47.442"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:47.881" level="INFO">Typing text 'A5chr' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:48.558" starttime="20150128 15:27:47.881"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:48.558" starttime="20150128 15:27:47.441"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:48.665" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:48.665" starttime="20150128 15:27:48.559"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:49.099" starttime="20150128 15:27:48.666"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:49.100" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:49.770" starttime="20150128 15:27:49.099"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:49.771" level="INFO">Typing text '5' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:50.429" starttime="20150128 15:27:49.771"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:50.430" starttime="20150128 15:27:48.558"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:50.432" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:27:51.120" starttime="20150128 15:27:50.432"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:51.120" starttime="20150128 15:27:50.431"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:27:51.122" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:27:52.324" starttime="20150128 15:27:51.122"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:52.324" starttime="20150128 15:27:51.121"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:52.326" level="INFO">Selecting checkbox 'Wrestling'.</msg>
+<status status="PASS" endtime="20150128 15:27:53.228" starttime="20150128 15:27:52.326"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:53.228" starttime="20150128 15:27:52.325"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:27:53.230" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:27:55.848" starttime="20150128 15:27:53.229"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:55.849" starttime="20150128 15:27:53.228"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:55.901" starttime="20150128 15:27:47.440"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:27:56.459" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:27:56.459" starttime="20150128 15:27:55.902"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:56.460" starttime="20150128 15:27:55.901"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:27:56.461" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:27:57.587" starttime="20150128 15:27:56.461"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:57.588" starttime="20150128 15:27:56.460"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:57.588" starttime="20150128 15:27:47.439"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:57.588" starttime="20150128 15:27:47.438"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:57.589" starttime="20150128 15:27:47.438"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>15Char Name, Age45, Female, Volleyball Should Pass</arg>
+</arguments>
+<kw type="kw" name="ts_valid.15Char Name, Age45, Female, Volleyball Should Pass">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>A15chractername</arg>
+<arg>45</arg>
+<arg>Female</arg>
+<arg>Volleyball</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:58.021" starttime="20150128 15:27:57.593"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:58.022" level="INFO">Typing text 'A15chractername' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:27:58.701" starttime="20150128 15:27:58.021"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:27:58.702" starttime="20150128 15:27:57.592"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:27:58.805" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:27:58.805" starttime="20150128 15:27:58.703"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:27:59.234" starttime="20150128 15:27:58.806"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:59.236" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:27:59.897" starttime="20150128 15:27:59.235"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:27:59.898" level="INFO">Typing text '45' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:00.553" starttime="20150128 15:27:59.898"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:00.553" starttime="20150128 15:27:58.702"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:00.555" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:28:01.249" starttime="20150128 15:28:00.555"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:01.250" starttime="20150128 15:28:00.554"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:28:01.251" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:28:02.597" starttime="20150128 15:28:01.251"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:02.597" starttime="20150128 15:28:01.250"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:02.599" level="INFO">Selecting checkbox 'Volleyball'.</msg>
+<status status="PASS" endtime="20150128 15:28:03.503" starttime="20150128 15:28:02.599"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:03.504" starttime="20150128 15:28:02.598"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:28:03.506" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:28:04.603" starttime="20150128 15:28:03.505"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:04.603" starttime="20150128 15:28:03.504"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:04.603" starttime="20150128 15:27:57.591"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:28:05.029" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:28:05.029" starttime="20150128 15:28:04.605"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:05.029" starttime="20150128 15:28:04.604"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:28:05.031" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:28:06.241" starttime="20150128 15:28:05.031"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:06.242" starttime="20150128 15:28:05.030"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:06.242" starttime="20150128 15:27:57.590"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:06.242" starttime="20150128 15:27:57.589"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:06.243" starttime="20150128 15:27:57.589"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>25Char Name, Age85, Male, MMA Should Pass</arg>
+</arguments>
+<kw type="kw" name="ts_valid.25Char Name, Age85, Male, MMA Should Pass">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>A25characternameleandrast</arg>
+<arg>85</arg>
+<arg>Male</arg>
+<arg>MMA</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:06.676" starttime="20150128 15:28:06.247"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:06.678" level="INFO">Typing text 'A25characternameleandrast' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:28:07.372" starttime="20150128 15:28:06.677"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:07.372" starttime="20150128 15:28:06.246"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:28:07.479" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:28:07.479" starttime="20150128 15:28:07.374"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:07.909" starttime="20150128 15:28:07.480"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:07.910" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:08.562" starttime="20150128 15:28:07.910"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:08.563" level="INFO">Typing text '85' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:09.223" starttime="20150128 15:28:08.563"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:09.224" starttime="20150128 15:28:07.373"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:09.226" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:28:09.921" starttime="20150128 15:28:09.225"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:09.921" starttime="20150128 15:28:09.224"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:28:09.922" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:28:11.161" starttime="20150128 15:28:09.922"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:11.162" starttime="20150128 15:28:09.921"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:11.164" level="INFO">Selecting checkbox 'MMA'.</msg>
+<status status="PASS" endtime="20150128 15:28:12.062" starttime="20150128 15:28:11.163"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:12.063" starttime="20150128 15:28:11.162"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:28:12.064" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:28:13.170" starttime="20150128 15:28:12.064"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:13.171" starttime="20150128 15:28:12.063"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:13.171" starttime="20150128 15:28:06.245"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:28:13.598" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:28:13.599" starttime="20150128 15:28:13.172"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:13.599" starttime="20150128 15:28:13.171"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:28:13.600" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:28:14.769" starttime="20150128 15:28:13.600"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:14.769" starttime="20150128 15:28:13.599"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:14.769" starttime="20150128 15:28:06.244"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:14.770" starttime="20150128 15:28:06.244"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:14.770" starttime="20150128 15:28:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>35Char Name, Age125, Female, Gymnastics Should Pass</arg>
+</arguments>
+<kw type="kw" name="ts_valid.35Char Name, Age125, Female, Gymnastics Should Pass">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>A35characternameleandrastanalizalee</arg>
+<arg>125</arg>
+<arg>Female</arg>
+<arg>Gymnastics</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:15.207" starttime="20150128 15:28:14.774"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:15.208" level="INFO">Typing text 'A35characternameleandrastanalizalee' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:28:15.911" starttime="20150128 15:28:15.207"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:15.912" starttime="20150128 15:28:14.774"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:28:16.019" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:28:16.019" starttime="20150128 15:28:15.913"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:16.452" starttime="20150128 15:28:16.019"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:16.453" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:17.117" starttime="20150128 15:28:16.452"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:17.118" level="INFO">Typing text '125' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:17.779" starttime="20150128 15:28:17.118"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:17.780" starttime="20150128 15:28:15.912"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:17.782" level="INFO">Selecting 'Female' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:28:18.478" starttime="20150128 15:28:17.781"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:18.479" starttime="20150128 15:28:17.780"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:28:18.481" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:28:20.119" starttime="20150128 15:28:18.480"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:20.119" starttime="20150128 15:28:18.479"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:20.121" level="INFO">Selecting checkbox 'Gymnastics'.</msg>
+<status status="PASS" endtime="20150128 15:28:21.024" starttime="20150128 15:28:20.121"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:21.025" starttime="20150128 15:28:20.120"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:28:21.026" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:28:22.155" starttime="20150128 15:28:21.026"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:22.156" starttime="20150128 15:28:21.025"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:22.156" starttime="20150128 15:28:14.772"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:28:22.582" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:28:22.583" starttime="20150128 15:28:22.157"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:22.583" starttime="20150128 15:28:22.156"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:28:22.584" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:28:23.916" starttime="20150128 15:28:22.584"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:23.916" starttime="20150128 15:28:22.583"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:23.916" starttime="20150128 15:28:14.772"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:23.917" starttime="20150128 15:28:14.771"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:23.917" starttime="20150128 15:28:14.770"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>50Char Name, Age150, Male, Wrestling Should Pass</arg>
+</arguments>
+<kw type="kw" name="ts_valid.50Char Name, Age150, Male, Wrestling Should Pass">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="resource.Submit Response Is Successful">
+<doc></doc>
+<arguments>
+<arg>A50characternameleandrastanalizaleeleandromunozcla</arg>
+<arg>150</arg>
+<arg>Male</arg>
+<arg>Wrestling</arg>
+</arguments>
+<kw type="kw" name="resource.Submit Response">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${age}</arg>
+<arg>${gender}</arg>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="resource.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:24.355" starttime="20150128 15:28:23.921"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.1563791636</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:24.356" level="INFO">Typing text 'A50characternameleandrastanalizaleeleandromunozcla' into text field 'entry.1563791636'</msg>
+<status status="PASS" endtime="20150128 15:28:25.111" starttime="20150128 15:28:24.356"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:25.112" starttime="20150128 15:28:23.920"></status>
+</kw>
+<kw type="kw" name="resource.Enter Age">
+<doc></doc>
+<arguments>
+<arg>${age}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.1</arg>
+</arguments>
+<msg timestamp="20150128 15:28:25.214" level="INFO">Slept 100 milliseconds</msg>
+<status status="PASS" endtime="20150128 15:28:25.215" starttime="20150128 15:28:25.113"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Clear Element Text">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:25.646" starttime="20150128 15:28:25.215"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${empty}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:25.647" level="INFO">Typing text '' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:26.302" starttime="20150128 15:28:25.647"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>entry.930637752</arg>
+<arg>${age}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:26.304" level="INFO">Typing text '150' into text field 'entry.930637752'</msg>
+<status status="PASS" endtime="20150128 15:28:26.971" starttime="20150128 15:28:26.303"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:26.971" starttime="20150128 15:28:25.112"></status>
+</kw>
+<kw type="kw" name="resource.Select Gender">
+<doc></doc>
+<arguments>
+<arg>${gender}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Radio Button">
+<doc>Sets selection of radio button group identified by `group_name` to `value`.</doc>
+<arguments>
+<arg>entry.351010933</arg>
+<arg>${gender}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:26.973" level="INFO">Selecting 'Male' from radio button 'entry.351010933'.</msg>
+<status status="PASS" endtime="20150128 15:28:27.659" starttime="20150128 15:28:26.972"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:27.659" starttime="20150128 15:28:26.971"></status>
+</kw>
+<kw type="kw" name="resource.Continue to Next Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>continue</arg>
+</arguments>
+<msg timestamp="20150128 15:28:27.661" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" endtime="20150128 15:28:29.029" starttime="20150128 15:28:27.660"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:29.030" starttime="20150128 15:28:27.660"></status>
+</kw>
+<kw type="kw" name="resource.Select Sport">
+<doc></doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Select Checkbox">
+<doc>Selects checkbox identified by `locator`.</doc>
+<arguments>
+<arg>${sport}</arg>
+</arguments>
+<msg timestamp="20150128 15:28:29.031" level="INFO">Selecting checkbox 'Wrestling'.</msg>
+<status status="PASS" endtime="20150128 15:28:29.939" starttime="20150128 15:28:29.031"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:29.939" starttime="20150128 15:28:29.030"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20150128 15:28:29.941" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20150128 15:28:31.199" starttime="20150128 15:28:29.941"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:31.200" starttime="20150128 15:28:29.940"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:31.200" starttime="20150128 15:28:23.919"></status>
+</kw>
+<kw type="kw" name="resource.Response Is Successfully Recorded">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your response has been recorded</arg>
+</arguments>
+<msg timestamp="20150128 15:28:31.628" level="INFO">Current page contains text 'Your response has been recorded'.</msg>
+<status status="PASS" endtime="20150128 15:28:31.628" starttime="20150128 15:28:31.201"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:31.629" starttime="20150128 15:28:31.201"></status>
+</kw>
+<kw type="kw" name="resource.Click Submit Another Response">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Link">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Magsumite ng iba pang tugon</arg>
+</arguments>
+<msg timestamp="20150128 15:28:31.630" level="INFO">Clicking link 'Magsumite ng iba pang tugon'.</msg>
+<status status="PASS" endtime="20150128 15:28:33.041" starttime="20150128 15:28:31.630"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:33.042" starttime="20150128 15:28:31.629"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:33.042" starttime="20150128 15:28:23.918"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:33.042" starttime="20150128 15:28:23.918"></status>
+</kw>
+<status status="PASS" endtime="20150128 15:28:33.042" starttime="20150128 15:28:23.917"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150128 15:28:33.290" starttime="20150128 15:28:33.043"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150128 15:28:33.290" critical="yes" starttime="20150128 15:27:39.618"></status>
+</test>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20150127 23:56:09.868" starttime="20150127 23:55:46.631"></status>
+<status status="FAIL" endtime="20150128 15:28:33.292" starttime="20150128 15:26:34.371"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="4">Critical Tests</stat>
-<stat fail="1" pass="4">All Tests</stat>
+<stat fail="2" pass="1">Critical Tests</stat>
+<stat fail="2" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" pass="4" id="s1" name="Ts Validation">Ts Validation</stat>
+<stat fail="2" pass="1" id="s1" name="Suite Testdata">Suite Testdata</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,0 +1,31 @@
+*** Settings ***
+Resource	resource.txt
+Resource	ts_validation.txt
+Resource	ts_valid.txt
+Resource	ts_invalid.txt
+Library		Selenium2Library
+Test Setup  Open Browser To Test Page
+Test Teardown   Close All Browsers
+
+*** Test Cases ***
+All Invalid Input Should Fail
+    Run Keyword And Continue On Failure     Empty Name Should Fail
+    Run Keyword And Continue On Failure     Empty Age Should Fail
+    Run Keyword And Continue On Failure     Negative Age Should Fail
+    Run Keyword And Continue On Failure     Less than 5 Age Should Fail
+    Run Keyword And Continue On Failure     Non-numeric Age Should Fail
+
+All Field Labels And Elements Should Be Displayed
+    Run Keyword And Continue On Failure     Verify Name Field Should Be Displayed
+    Run Keyword And Continue On Failure     Verify Age Field Should Be Displayed
+    Run Keyword And Continue On Failure     Verify Gender Field Should Be Displayed
+    Run Keyword And Continue On Failure     Verify Sports(Women) Field Should Be Displayed
+    Back to First Page
+    Run Keyword And Continue On Failure     Verify Sports(Men) Field Should Be Displayed
+
+All Valid Input Should Pass
+    Run Keyword And Continue On Failure     5Char Name, Age5, Male, Wrestling Should Pass
+    Run Keyword And Continue On Failure     15Char Name, Age45, Female, Volleyball Should Pass
+    Run Keyword And Continue On Failure     25Char Name, Age85, Male, MMA Should Pass
+    Run Keyword And Continue On Failure     35Char Name, Age125, Female, Gymnastics Should Pass
+    Run Keyword And Continue On Failure     50Char Name, Age150, Male, Wrestling Should Pass

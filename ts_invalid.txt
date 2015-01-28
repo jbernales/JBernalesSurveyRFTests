@@ -1,27 +1,19 @@
 *** Settings ***
 Resource	resource.txt
 Library		Selenium2Library
-Test Template	Submit Invalid Response
-Test Setup	Open Browser To Test Page
-Test Teardown	Close Browser
-
-*** Test Cases ***	Name	Age	Gender
-Empty Name	${empty}	5	Male
-
-Empty Age	A15chractername	${empty}	Female
-
-Non-numeric Age	A50characternameleandrastanalizaleeleandromunozcla	Five	Male
-
-Negative Age	A35characternameleandrastanalizalee	-25	Female
-
-Less than 5 Age	A25characternameleandrast	1	Male
-
 
 *** Keywords ***
-Submit Invalid Response
-	[Arguments]	${name}	${age}	${gender}
-	Enter Name	${name}
-	Enter Age	${age}
-	Select Gender	${gender}
-	Continue to Next Page
-	Response Is Not Accepted
+Empty Name Should Fail
+    Run Keyword And Expect Error    *   Submit Response Is Successful   ${empty}	5	Male    Wrestling
+
+Empty Age Should Fail
+    Run Keyword And Expect Error    *   Submit Response Is Successful   Alexander	${empty}	Female  Volleyball
+
+Negative Age Should Fail
+    Run Keyword And Expect Error    *   Submit Response Is Successful  Ricardo	-25	Female  Gymnastics
+
+Less than 5 Age Should Fail
+    Run Keyword And Expect Error    *   Submit Response Is Successful  Mercedez	1	Male    Wrestling
+
+Non-numeric Age Should Fail
+    Run Keyword And Expect Error    *   Submit Response Is Successful  Beatriz	Z	Male    MMA
